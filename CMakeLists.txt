@@ -62,7 +62,7 @@ if(BUILD_COVERAGE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/coverage/cmake")
   find_package(codecov)
 
-  add_coverage(explorer)
+  add_coverage(analysis)
   add_coverage(tests)
   coverage_evaluate()
 endif()

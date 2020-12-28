@@ -11,15 +11,15 @@ int main(int argc, char* argv[]) {
         path = ".";
         Analysis exp(path);
         exp.Analyze();
-        exp.OutPut();
+        std::cout << exp;
     }
 
-    if (argc == 2)
+    else if (argc == 2)
     {
         path = argv[1];
         Analysis exp(path);
         exp.Analyze();
-        exp.OutPut();
+        std::cout << exp;
     }
-
+    return 0;
 }

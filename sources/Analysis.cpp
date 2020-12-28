@@ -160,20 +160,19 @@ void Analysis::Analyze()
     }
 }
 
-void Analysis::OutPut()
-{
-    for (auto& x : _trader)
+std::ostream& operator << (std::ostream &out, const Analysis& _analysis) {
+    for (auto& x : _analysis._trader)
         for (auto& y : x.balance)
-            std::cout << x.bal_id << " " << y << std::endl;
+            out << x.bal_id << " " << y << std::endl;
 
-    std::cout << std::endl;
+    out << std::endl;
 
-    for (auto& x : _trader)
+    for (auto& x : _analysis._trader)
     {
-        std::cout << "broker:" << x.bal_id << " ";
-        std::cout << "account: " << x.acc_id << " ";
-        std::cout << "files:" << x.file_count << " ";
-        std::cout << "lastdate:" << x.last_date << std::endl;
+        out << "broker:" << x.bal_id << " ";
+        out << "account: " << x.acc_id << " ";
+        out << "files:" << x.file_count << " ";
+        out << "lastdate:" << x.last_date << std::endl;
     }
-
+    return out;
 }

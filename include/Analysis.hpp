@@ -38,7 +38,7 @@ public:
     void DirAnalyze(const directory_entry& dirPath);
     bool NameAnalyze(const path& filePath);
     bool isNumber(const std::string& fileNamePart);
-    void OutPut();
+    friend std::ostream& operator << (std::ostream &out, const Analysis& _analysis);
 private:
     std::vector<struct account> _trader;
     path _path;

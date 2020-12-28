@@ -43,7 +43,7 @@ target_include_directories(analysis
         )
 
 add_executable(main
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
+        demo/main.cpp
         )
 
 target_link_libraries(main analysis)
